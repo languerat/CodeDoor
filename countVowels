@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class countVowels {
+
+	public static void main(String[] args) {
+		
+	    System.out.println("Please enter a word ");
+		Scanner sc = new Scanner (System.in);
+	    String word = sc.nextLine();
+	    System.out.println("This word has exactly " + numtVowels(word) + " vowels");
+
+	  }
+	    public static int numtVowels (String word) {
+	      //String [] vowels = new String [] {"a","e","i","o","u"};
+	    	List <String> vowels = new ArrayList <String> ();
+	    	vowels.add("a");
+	    	vowels.add("e");
+	    	vowels.add("i");
+	    	vowels.add("o");
+	    	vowels.add("u");
+	      int numVowels = 0;
+	      for (int i=0; i < word.length(); i++) {
+	    	  String letter = String.valueOf(word.charAt(i));
+	    	  if (vowels.contains(letter)) {
+	    		  numVowels++;
+	    	  }
+	      }
+		return numVowels;
+	      
+	    }
+
+}
